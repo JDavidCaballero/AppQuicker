@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_redes"
+            android:icon="@drawable/ic_wifi"
+            android:title="@string/menu_redes" />
+        <item
+            android:id="@+id/nav_entretenimiento"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_entretenimiento" />
+
+        <item
+            android:id="@+id/nav_mensajeria"
+            android:title="@string/menu_mensajeria"
+            android:icon="@drawable/ic_mensajes"
+            />
+
+        <item
+            android:id="@+id/nav_ofimatica"
+            android:title="@string/menu_ofimatica"
+            android:icon="@drawable/ic_ofimatica"
+            />
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item android:title="Comparte la App">
+
+            <menu>
+
+                <item
+                    android:id="@+id/nav_comparte"
+                    android:title="Comparte"
+                    android:icon="@drawable/calificanosicono"
+                    />
+
+                <item
+                    android:id="@+id/nav_calificanos"
+                    android:title="Calificanos"
+                    android:icon="@drawable/compartirlogo"
+                    />
+
+            </menu>
+        </item>
+    </group>
+</menu>
