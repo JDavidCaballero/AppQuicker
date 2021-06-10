@@ -8,11 +8,15 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_redes">Redes sociales</string>
-    <string name="menu_entretenimiento">Entretenimiento</string>
-    <string name="menu_mensajeria">Mensajeria</string>
-    <string name="menu_ofimatica">Ofimatica</string>
+    <string name="menu_redes">Apps de Redes sociales</string>
+    <string name="menu_entretenimiento">Apps de Entretenimiento</string>
+    <string name="menu_mensajeria">Apps de Mensajeria</string>
+    <string name="menu_ofimatica">Apps de Ofimatica</string>
 
     <string name="app_title">Basical App installer</string>
     <string name="menu_apps">Menu redes sociales</string>
+    <string name="menu_apps_entretenimiento">Entretenimiento</string>
+    <string name="menu_apps_mensajeria">Mensajeria</string>
+    <string name="menu_apps_ofimatica">Ofimatica</string>
+
 </resources>

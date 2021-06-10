@@ -1,6 +1,9 @@
 package com.example.appkotlinnav
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -27,8 +30,12 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMain.toolbar)
 
         binding.appBarMain.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            Snackbar.make(view, "Ingresaras a la base de datos!", Snackbar.LENGTH_LONG)
+
+
+
+
+
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView

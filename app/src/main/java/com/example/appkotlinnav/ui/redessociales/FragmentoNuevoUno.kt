@@ -34,7 +34,7 @@ class FragmentoNuevoUno : Fragment() {
 
         myinbutton.setOnClickListener {
 
-            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/"))
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.instagram.android"))
             startActivity(i)
         }
 
@@ -42,7 +42,7 @@ class FragmentoNuevoUno : Fragment() {
 
         mytwbutton.setOnClickListener {
 
-            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.twitter.com/"))
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.twitter.android"))
             startActivity(i)
         }
 
@@ -51,7 +51,7 @@ class FragmentoNuevoUno : Fragment() {
 
         mythibutton.setOnClickListener {
 
-            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.reddit.com/"))
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.reddit.frontpage"))
             startActivity(i)
         }
 

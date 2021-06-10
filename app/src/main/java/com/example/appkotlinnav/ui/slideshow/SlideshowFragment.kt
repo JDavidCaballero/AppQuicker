@@ -1,9 +1,12 @@
 package com.example.appkotlinnav.ui.slideshow
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -31,10 +34,32 @@ class SlideshowFragment : Fragment() {
         _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        val mywhbutton = root.findViewById<Button>(R.id.button3)
+
+
+        mywhbutton.setOnClickListener {
+
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.whatsapp"))
+            startActivity(i)
+        }
+
+        val mytwbutton = root.findViewById<Button>(R.id.button5)
+
+        mytwbutton.setOnClickListener {
+
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=org.telegram.messenger"))
+            startActivity(i)
+        }
+
+        val mythibutton = root.findViewById<Button>(R.id.button6)
+
+
+        mythibutton.setOnClickListener {
+
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.gm"))
+            startActivity(i)
+        }
+
         return root
     }
 

@@ -1,9 +1,12 @@
 package com.example.appkotlinnav.ui.gallery
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -31,10 +34,31 @@ class GalleryFragment : Fragment() {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        val myytbutton = root.findViewById<Button>(R.id.button3)
+
+        myytbutton.setOnClickListener {
+
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.youtube"))
+            startActivity(i)
+        }
+
+        val mytwbutton = root.findViewById<Button>(R.id.button5)
+
+        mytwbutton.setOnClickListener {
+
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=tv.twitch.android.app"))
+            startActivity(i)
+        }
+
+        val mythibutton = root.findViewById<Button>(R.id.button6)
+
+
+        mythibutton.setOnClickListener {
+
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.spotify.music"))
+            startActivity(i)
+        }
+
         return root
     }
 

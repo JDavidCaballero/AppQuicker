@@ -11,17 +11,23 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_nav_gallery"
+            android:id="@+id/action_nav_home_to_nav_redes"
+            app:destination="@id/nav_redes" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_entretenimiento"
             app:destination="@id/nav_entretenimiento" />
         <action
-            android:id="@+id/action_nav_home_to_nav_slideshow"
+            android:id="@+id/action_nav_home_to_nav_mensajeria"
             app:destination="@id/nav_mensajeria" />
+        <action
+            android:id="@+id/action_nav_home_to_fragmento_ofimtica"
+            app:destination="@id/nav_ofimatica" />
     </fragment>
 
     <fragment
         android:id="@+id/nav_entretenimiento"
         android:name="com.example.appkotlinnav.ui.gallery.GalleryFragment"
-        android:label="@string/menu_redes"
+        android:label="@string/menu_entretenimiento"
         tools:layout="@layout/fragment_gallery" >
         <action
             android:id="@+id/action_nav_gallery_to_nav_home"
@@ -32,7 +38,7 @@
     <fragment
         android:id="@+id/nav_mensajeria"
         android:name="com.example.appkotlinnav.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_entretenimiento"
+        android:label="@string/menu_mensajeria"
         tools:layout="@layout/fragment_slideshow" >
         <action
             android:id="@+id/action_nav_slideshow_to_nav_home"
@@ -43,12 +49,22 @@
     <fragment
         android:id="@+id/nav_redes"
         android:name="com.example.appkotlinnav.ui.redessociales.FragmentoNuevoUno"
-        android:label="Menu interno apps"
+        android:label="@string/menu_redes"
         tools:layout="@layout/fragmento_nuevo_uno_fragment" >
         <action
             android:id="@+id/action_nav_slideshow_to_nav_apps"
             app:enterAnim="@anim/fragment_fade_exit"
             app:popUpTo="@id/nav_home" />
 
+    </fragment>
+    <fragment
+        android:id="@+id/nav_ofimatica"
+        android:name="com.example.appkotlinnav.ui.ofimatica.Fragmento_ofimtica"
+        android:label="@string/menu_ofimatica"
+        tools:layout="@layout/fragmento_ofimtica_fragment" >
+        <action
+            android:id="@+id/action_fragmento_ofimtica_to_nav_home"
+            app:enterAnim="@anim/fragment_fade_exit"
+            app:destination="@id/nav_home" />
     </fragment>
 </navigation>

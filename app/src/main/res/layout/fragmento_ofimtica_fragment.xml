@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/roundstyle"
-    tools:context=".ui.redessociales.FragmentoNuevoUno">
+    tools:context=".ui.ofimatica.Fragmento_ofimtica"
+    android:background="@drawable/backgrmenufou">
 
-    <ScrollView
+
+<ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +29,7 @@
                 android:layout_marginEnd="110dp"
                 android:layout_marginRight="110dp"
                 android:layout_marginBottom="500dp"
-                android:text="@string/menu_apps"
+                android:text="@string/menu_apps_ofimatica"
                 android:textColor="@color/white"
                 android:textSize="34sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -42,8 +43,8 @@
                 android:layout_height="80dp"
 
                 android:background="@drawable/backgroundredes"
-                android:text="Instagram"
-                app:backgroundTint="#FFA000"
+                android:text="Word"
+                app:backgroundTint="#304FFE"
                 app:layout_constraintBottom_toTopOf="@+id/button5"
                 app:layout_constraintEnd_toEndOf="parent"
 
@@ -57,8 +58,8 @@
                 android:layout_marginTop="40dp"
 
                 android:background="@drawable/backgroundredes"
-                android:text="Twitter"
-                app:backgroundTint="#1976D2"
+                android:text="Excel"
+                app:backgroundTint="#2E7D32"
                 app:layout_constraintBottom_toTopOf="@id/button6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -71,8 +72,8 @@
                 android:layout_marginTop="40dp"
 
                 android:background="@drawable/backgroundredes"
-                android:text="Reddit"
-                app:backgroundTint="#ff4500"
+                android:text="Presentaciones"
+                app:backgroundTint="#F57F17"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -82,4 +83,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
 </androidx.drawerlayout.widget.DrawerLayout>
