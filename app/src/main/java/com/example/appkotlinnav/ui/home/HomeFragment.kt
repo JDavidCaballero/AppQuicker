@@ -73,6 +73,15 @@ class HomeFragment : Fragment() {
 
         }
 
+        val myfivetbutton = root.findViewById<Button>(R.id.button2)
+
+        myfivetbutton.setOnClickListener {
+
+            val action = HomeFragmentDirections.actionNavHomeToMainActivityDataBases()
+            findNavController().navigate(action)
+
+        }
+
         return root
     }
 
