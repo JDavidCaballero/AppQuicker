@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_update_dbase.*
 import java.security.AccessController.getContext
 import java.util.ArrayList
 
@@ -49,12 +50,8 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
 
 
         val db = this.writableDatabase
-
-
-        creatingtable(db)
-
-
         var cv = ContentValues()
+
         cv.put(Col_Name, user.name)
         cv.put(Col_Age, user.age)
         var result = db.insert(Table_Name,null,cv)
@@ -98,6 +95,24 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
         db.close()
     }
 
+    fun updateTableById(user : User, id : Int){
+
+        val db = this.writableDatabase
+        var cv = ContentValues()
+
+        cv.put(Col_Name, user.name)
+        cv.put(Col_Age, user.age)
+
+        var resultUp = db.update(Table_Name, cv, "$Col_Id=?", arrayOf(id.toString()))
+
+        if(resultUp <= 0)
+            Toast.makeText(context, "Falló al Actualizar datos o no se encontró la ID de usuario",Toast.LENGTH_SHORT).show()
+
+        else
+            Toast.makeText(context, "Se Actualizaron los datos correctamente",Toast.LENGTH_SHORT).show()
+    }
+
+    //solo autoincrementa el nnumero de pin o col_age
     fun updateData() {
 
         val db = this.writableDatabase

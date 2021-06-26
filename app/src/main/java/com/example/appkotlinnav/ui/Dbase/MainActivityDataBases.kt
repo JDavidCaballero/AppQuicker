@@ -37,6 +37,18 @@ class MainActivityDataBases : AppCompatActivity() {
 
         }
 
+        buttonshowdb.setOnClickListener(){
+
+            val intent = Intent(this, ShowData::class.java)
+            startActivity(intent);
+        }
+
+        buttonUpdatedb.setOnClickListener(){
+
+            val intent = Intent(this, UpdateDbase::class.java)
+            startActivity(intent);
+        }
+
 
     }
 }

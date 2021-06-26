@@ -27,8 +27,9 @@ class ShowData : AppCompatActivity() {
 
         btn_update.setOnClickListener{
 
-            db.updateData()
-            btn_read.performClick()
+            val intent = Intent(this, UpdateDbase::class.java)
+            startActivity(intent)
+
         }
 
         btn_delete.setOnClickListener{

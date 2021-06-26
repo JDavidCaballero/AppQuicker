@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.Dbase.MainActivityDataBases"
+    tools:context=".ui.Dbase.UpdateDbase"
     android:background="@drawable/gradient_home">
 
     <ScrollView
@@ -23,21 +23,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="70dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
                 android:layout_marginEnd="225dp"
                 android:layout_marginRight="225dp"
-                android:layout_marginBottom="70dp"
-                android:text="Usuario"
+                android:layout_marginBottom="30dp"
+                android:text="Nuevo usuario"
                 android:textSize="34sp"
-                app:layout_constraintBottom_toTopOf="@+id/etvName"
+                app:layout_constraintBottom_toTopOf="@+id/etvUpdatedName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/etvSelectId" />
 
             <EditText
-                android:id="@+id/etvName"
+                android:id="@+id/etvUpdatedName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -55,79 +54,85 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
                 android:layout_marginEnd="225dp"
                 android:layout_marginRight="225dp"
-                android:layout_marginBottom="70dp"
-                android:text="PIN"
+                android:layout_marginBottom="30dp"
+                android:text="Nuevo PIN"
                 android:textSize="34sp"
-                app:layout_constraintBottom_toTopOf="@+id/etvAge"
+                app:layout_constraintBottom_toTopOf="@+id/etvUpdatedAge"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etvName" />
+                app:layout_constraintTop_toBottomOf="@+id/etvUpdatedName" />
 
             <EditText
-                android:id="@+id/etvAge"
+                android:id="@+id/etvUpdatedAge"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginBottom="100dp"
+                android:layout_marginBottom="70dp"
                 android:inputType="number"
                 android:padding="10dp"
-                app:layout_constraintBottom_toTopOf="@+id/btn_insert"
+                app:layout_constraintBottom_toTopOf="@+id/btn_updatetable"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginEnd="225dp"
+                android:layout_marginRight="225dp"
+                android:layout_marginBottom="30dp"
+                android:text="ID a actualizar"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toTopOf="@+id/etvSelectId"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etvSelectId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="50dp"
+                android:inputType="number"
+                android:padding="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
             <Button
-                android:id="@+id/btn_insert"
+                android:id="@+id/btn_updatetable"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="50dp"
-                android:backgroundTint="#424242"
-                android:text="Insertar datos"
-                app:layout_constraintBottom_toTopOf="@+id/buttonshowdb"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etvAge" />
-
-            <Button
-                android:id="@+id/buttonshowdb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="100dp"
-                android:backgroundTint="#424242"
-
-                android:text="Mostrar DB"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/buttonUpdatedb"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_insert" />
-
-            <Button
-                android:id="@+id/buttonUpdatedb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="100dp"
-                android:backgroundTint="#424242"
-
-                android:text="Actualizar DB"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#00bb2d"
+                android:text="Actualizar Datos"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/buttonshowdb"
-                app:layout_constraintTop_toBottomOf="@+id/btn_insert" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etvUpdatedAge" />
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

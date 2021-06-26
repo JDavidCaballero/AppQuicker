@@ -22,11 +22,13 @@
         </activity>
         <activity
             android:name=".ui.Dbase.MainActivityDataBases"
-            android:theme="@style/Theme.AppKotlinNav.NoActionBar"></activity>
-
+            android:theme="@style/Theme.AppKotlinNav.NoActionBar" />
         <activity
             android:name=".ui.Dbase.ShowData"
-            android:theme="@style/Theme.AppKotlinNav.NoActionBar"></activity>
+            android:theme="@style/Theme.AppKotlinNav.NoActionBar" />
+        <activity
+            android:name=".ui.Dbase.UpdateDbase"
+            android:theme="@style/Theme.AppKotlinNav.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -8,7 +8,9 @@ class User {
 
     constructor(name:String, age:Int) {
 
+
         this.name = name
+
         this.age = age
 
 
