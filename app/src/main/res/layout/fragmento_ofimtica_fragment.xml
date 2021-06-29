@@ -44,6 +44,7 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Word"
+                android:textColor="@color/white"
                 app:backgroundTint="#304FFE"
                 app:layout_constraintBottom_toTopOf="@+id/button5"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -59,6 +60,8 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Excel"
+                android:textColor="@color/white"
+
                 app:backgroundTint="#2E7D32"
                 app:layout_constraintBottom_toTopOf="@id/button6"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -73,6 +76,8 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Presentaciones"
+                android:textColor="@color/white"
+
                 app:backgroundTint="#F57F17"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

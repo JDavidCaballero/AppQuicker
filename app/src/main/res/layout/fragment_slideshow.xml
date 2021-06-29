@@ -44,6 +44,8 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Whatsapp"
+                android:textColor="@color/white"
+
                 app:backgroundTint="#075e54"
                 app:layout_constraintBottom_toTopOf="@+id/button5"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -59,6 +61,8 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Telegram"
+                android:textColor="@color/white"
+
                 app:backgroundTint="#0088cc"
                 app:layout_constraintBottom_toTopOf="@id/button6"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -73,6 +77,8 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Correo"
+                android:textColor="@color/white"
+
                 app:backgroundTint="#BB001B"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMain.toolbar)
 
         binding.appBarMain.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Ingresaras a la base de datos!", Snackbar.LENGTH_LONG)
+            Toast.makeText(getApplicationContext(), "Muy bien! eres crack", Toast.LENGTH_LONG).show()
 
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout

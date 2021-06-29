@@ -21,7 +21,7 @@ class ShowData : AppCompatActivity() {
             tvResult.text=""
             for (i in 0..(data.size-1)){
 
-                tvResult.append(data.get(i).id.toString() + ". "+ "Nombre: " + data.get(i).name + " | " + "PIN: " + data.get(i).age + "\n\n")
+                tvResult.append(data.get(i).id.toString() + ". " + "Email: "+ data.get(i).email + "\n" + " | "+ "Nombre de usuario: " + data.get(i).username + "\n" + " | " + "Password: " + data.get(i).password /*+ " | " + "PIN : " + data.get(i).pin*/ + "\n\n")
             }
         }
 

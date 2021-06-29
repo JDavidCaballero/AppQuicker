@@ -43,6 +43,8 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Instagram"
+                android:textColor="@color/white"
+
                 app:backgroundTint="#FFA000"
                 app:layout_constraintBottom_toTopOf="@+id/button5"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +60,8 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Twitter"
+                android:textColor="@color/white"
+
                 app:backgroundTint="#1976D2"
                 app:layout_constraintBottom_toTopOf="@id/button6"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +76,8 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Reddit"
+                android:textColor="@color/white"
+
                 app:backgroundTint="#ff4500"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

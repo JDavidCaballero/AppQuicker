@@ -13,8 +13,10 @@ import java.util.ArrayList
 
 val DataBase_Name = "MyDB"
 val Table_Name = "Users"
-val Col_Name = "name"
-val Col_Age = "age"
+val Col_Email = "email"
+val Col_UserName = "username"
+val Col_Password = "password"
+/*val Col_Pin = "pin"*/
 val Col_Id = "id"
 
 class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase_Name, null,1) {
@@ -23,8 +25,10 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
         
         val createTable = "CREATE TABLE " + Table_Name + " (" +
                 Col_Id +" INTEGER PRIMARY KEY AUTOINCREMENT," +
-                Col_Name + " VARCHAR(256)," +
-                Col_Age +" INTEGER)" ;
+                Col_UserName + " VARCHAR(256)," +
+                Col_Email + " VARCHAR(256)," +
+                Col_Password + " VARCHAR(256)" + " )" ; 
+                /*Col_Pin +" INTEGER)"*/
 
             db?.execSQL(createTable)
 
@@ -38,8 +42,10 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
 
         val createTableifnotexixts = "CREATE TABLE IF NOT EXISTS " + Table_Name + " (" +
                 Col_Id +" INTEGER PRIMARY KEY AUTOINCREMENT," +
-                Col_Name + " VARCHAR(256)," +
-                Col_Age +" INTEGER)" ;
+                Col_UserName + " VARCHAR(256)," +
+                Col_Email + " VARCHAR(256)," +
+                Col_Password + " VARCHAR(256)" + " )" ;
+                /*Col_Pin +" INTEGER)"*/
 
         db?.execSQL(createTableifnotexixts)
 
@@ -49,11 +55,16 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
     fun insertData(user: User ){
 
 
+
         val db = this.writableDatabase
         var cv = ContentValues()
+        creatingtable(db)
 
-        cv.put(Col_Name, user.name)
-        cv.put(Col_Age, user.age)
+        cv.put(Col_Email, user.email)
+        cv.put(Col_UserName, user.username)
+        cv.put(Col_Password, user.password)
+        /*cv.put(Col_Pin, user.pin)*/
+
         var result = db.insert(Table_Name,null,cv)
         if(result == -1.toLong())
             Toast.makeText(context, "Falló al insertar datos, intentelo mas tarde",Toast.LENGTH_SHORT).show()
@@ -64,18 +75,27 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
 
     fun readData() : MutableList<User>{
 
+       // val Tableifnotexixts = "IF NOT EXISTS " + Table_Name
+
+
+
         var list : MutableList<User> = ArrayList()
 
         val db = this.readableDatabase
         val query = "Select * from " + Table_Name
         val result = db.rawQuery(query,null)
+
+        
+
         if(result.moveToFirst()) {
 
             do{
                 var user = User()
                 user.id  = result.getString(result.getColumnIndex(Col_Id)).toInt()
-                user.name  = result.getString(result.getColumnIndex(Col_Name))
-                user.age  = result.getString(result.getColumnIndex(Col_Age)).toInt()
+                user.email = result.getString(result.getColumnIndex(Col_Email))
+                user.username  = result.getString(result.getColumnIndex(Col_UserName))
+                user.password = result.getString(result.getColumnIndex(Col_Password))
+               /* user.pin  = result.getString(result.getColumnIndex(Col_Pin)).toInt()*/
                 list.add(user)
 
             }while (result.moveToNext())
@@ -100,8 +120,11 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
         val db = this.writableDatabase
         var cv = ContentValues()
 
-        cv.put(Col_Name, user.name)
-        cv.put(Col_Age, user.age)
+
+        cv.put(Col_Email, user.email)
+        cv.put(Col_UserName, user.username)
+        cv.put(Col_Password, user.password)
+       /* cv.put(Col_Pin, user.pin)*/
 
         var resultUp = db.update(Table_Name, cv, "$Col_Id=?", arrayOf(id.toString()))
 
@@ -113,7 +136,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
     }
 
     //solo autoincrementa el nnumero de pin o col_age
-    fun updateData() {
+    /*fun updateData() {
 
         val db = this.writableDatabase
         val query = "Select * from " + Table_Name
@@ -134,6 +157,6 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
         result.close()
         db.close()
 
-    }
+    }*/
 
 }

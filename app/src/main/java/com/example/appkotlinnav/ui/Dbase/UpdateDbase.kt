@@ -17,24 +17,45 @@ class UpdateDbase : AppCompatActivity() {
 
         val context = this
 
+        fun validarEmail(): Boolean{
+
+            var emailvalidacion = etvUpdatedEmail.text.toString().trim()
+
+            var emailPattern : String = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+
+            if (emailvalidacion.matches(emailPattern.toRegex()))
+            {
+                Toast.makeText(getApplicationContext(),"Email valido",Toast.LENGTH_SHORT).show();
+                return true
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(),"Email invalido ", Toast.LENGTH_SHORT).show();
+                return false
+            }
+
+        }
+
         btn_updatetable.setOnClickListener {
 
 
+            if (validarEmail() == true &&
 
+                etvSelectId.text.toString().length > 0 &&
 
-            if (etvSelectId.text.toString().length > 0 &&
+                etvUpdatedEmail.text.toString().length > 0 &&
 
-                etvUpdatedName.text.toString().length > 0 &&
+                etvUpdatedUserName.text.toString().length > 0 &&
 
-                etvUpdatedAge.text.toString().length > 0) {
+                etvUpdatedPassword.text.toString().length > 0
+
+                /*etvUpdatedPin.text.toString().length > 0*/) {
 
                 var id = etvSelectId.text.toString().toInt()
 
-                var user = User(etvUpdatedName.text.toString(), etvUpdatedAge.text.toString().toInt())
+                var user = User(etvUpdatedEmail.text.toString(),etvUpdatedUserName.text.toString() ,etvUpdatedPassword.text.toString()/*, etvUpdatedPin.text.toString().toInt()*/)
 
                 var db = DataBaseHandler(context)
-
-
 
                 db.updateTableById(user, id)
 

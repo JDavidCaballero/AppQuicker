@@ -43,6 +43,8 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Youtube"
+                android:textColor="@color/white"
+
                 app:backgroundTint="#FF0000"
                 app:layout_constraintBottom_toTopOf="@+id/button5"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +60,7 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Twitch"
+                android:textColor="@color/white"
                 app:backgroundTint="#6441a5"
                 app:layout_constraintBottom_toTopOf="@id/button6"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +75,7 @@
 
                 android:background="@drawable/backgroundredes"
                 android:text="Spotify"
+                android:textColor="@color/white"
                 app:backgroundTint="#1DB954"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

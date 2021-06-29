@@ -3,15 +3,24 @@ package com.example.appkotlinnav
 class User {
 
     var id : Int = 0
-    var name : String = ""
-    var age : Int = 0
 
-    constructor(name:String, age:Int) {
+    var email : String = ""
 
+    var username : String = ""
 
-        this.name = name
+    var password : String = ""
 
-        this.age = age
+    /*var pin : Int = 0*/
+
+    constructor(email : String , username:String, password : String /*, pin : Int*/) {
+
+        this.email = email
+
+        this.username = username
+
+        this.password = password
+
+        /*this.pin = pin*/
 
 
     }
