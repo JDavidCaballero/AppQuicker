@@ -77,7 +77,7 @@ class HomeFragment : Fragment() {
 
         myfivetbutton.setOnClickListener {
 
-            val action = HomeFragmentDirections.actionNavHomeToMainActivityDataBases()
+            val action = HomeFragmentDirections.actionNavHomeToLogin()
             findNavController().navigate(action)
 
         }

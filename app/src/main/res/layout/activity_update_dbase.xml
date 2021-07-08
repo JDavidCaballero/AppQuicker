@@ -18,6 +18,42 @@
             android:layout_width="match_parent"
             android:layout_height="721dp">
 
+            <ImageButton
+                android:id="@+id/imageButtonarrowu"
+                android:layout_width="37dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="9dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toTopOf="@+id/textView9"
+                app:layout_constraintEnd_toStartOf="@+id/imageButtonhouseu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintVertical_bias="0.51"
+                app:srcCompat="@drawable/ic_arrow_back" />
+
+            <ImageButton
+                android:id="@+id/imageButtonhouseu"
+                android:layout_width="37dp"
+                android:layout_height="33dp"
+
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="180dp"
+                android:layout_marginRight="180dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toTopOf="@+id/textView9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.403"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonarrowu"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_home_24" />
+
+
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
@@ -125,8 +161,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:layout_marginStart="100dp"
-                android:layout_marginLeft="100dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
                 android:layout_marginEnd="225dp"
                 android:layout_marginRight="225dp"
                 android:layout_marginBottom="30dp"

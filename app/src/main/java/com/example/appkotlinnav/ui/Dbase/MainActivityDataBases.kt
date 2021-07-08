@@ -8,6 +8,8 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.appkotlinnav.*
 import kotlinx.android.synthetic.main.activity_main_data_bases.*
+import kotlinx.android.synthetic.main.activity_main_data_bases.imageButtonarrow
+import kotlinx.android.synthetic.main.activity_show_data.*
 import kotlinx.android.synthetic.main.activity_update_dbase.*
 
 class MainActivityDataBases : AppCompatActivity() {
@@ -72,6 +74,14 @@ class MainActivityDataBases : AppCompatActivity() {
             val intent = Intent(this, UpdateDbase::class.java)
             startActivity(intent);
         }
+
+        imageButtonarrow.setOnClickListener{
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+
 
 
     }

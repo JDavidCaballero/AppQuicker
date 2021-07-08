@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.appkotlinnav.DataBaseHandler
+import com.example.appkotlinnav.MainActivity
 import com.example.appkotlinnav.R
+import com.example.appkotlinnav.ui.home.HomeFragment
 import kotlinx.android.synthetic.main.activity_show_data.*
 
 class ShowData : AppCompatActivity() {
@@ -39,6 +41,18 @@ class ShowData : AppCompatActivity() {
             val intent = Intent(this, MainActivityDataBases::class.java)
             startActivity(intent);
 
+        }
+
+        imageButtonarrow.setOnClickListener{
+
+            val intent = Intent(this, MainActivityDataBases::class.java)
+            startActivity(intent)
+        }
+
+        imageButtonhouse.setOnClickListener{
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
 

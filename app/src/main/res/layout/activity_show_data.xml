@@ -7,6 +7,7 @@
     tools:context=".ui.Dbase.ShowData"
     android:background="@drawable/gradient_home">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,6 +16,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/biryani_bold"
+            android:text="Base de contraseñas"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_read"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButtonarrow"
+            android:layout_width="37dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="9dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonhouse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.51"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <ImageButton
+            android:id="@+id/imageButtonhouse"
+            android:layout_width="37dp"
+            android:layout_height="33dp"
+
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="160dp"
+            android:layout_marginRight="160dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.403"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonarrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_home_24" />
 
         <Button
             android:id="@+id/btn_read"
@@ -57,21 +107,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_update" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:layout_marginBottom="50dp"
-            android:fontFamily="@font/biryani_bold"
-            android:text="Base de contraseñas"
-            android:textColor="@color/white"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_read"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "27469297765",
+    "project_id": "loginappquicker",
+    "storage_bucket": "loginappquicker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27469297765:android:5c67a4fdc809b425c32e8c",
+        "android_client_info": {
+          "package_name": "com.example.appkotlinnav"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "27469297765-icqa3l9kia2b5eqellll7pnuh0fnjrq9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appkotlinnav",
+            "certificate_hash": "e43ae10fb2b8afc95aa576c887cb64dd6094d5d5"
+          }
+        },
+        {
+          "client_id": "27469297765-knal41dtgv3gbs14dd77c7hhnsafe6ur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCQ8mQad4II7rOxl8tvDes2lh-dhuiVAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "27469297765-knal41dtgv3gbs14dd77c7hhnsafe6ur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

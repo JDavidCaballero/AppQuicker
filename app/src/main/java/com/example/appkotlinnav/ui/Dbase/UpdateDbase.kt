@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.appkotlinnav.DataBaseHandler
+import com.example.appkotlinnav.MainActivity
 import com.example.appkotlinnav.R
 import com.example.appkotlinnav.User
 import kotlinx.android.synthetic.main.activity_main_data_bases.*
@@ -67,6 +68,18 @@ class UpdateDbase : AppCompatActivity() {
             }
 
 
+        }
+
+        imageButtonarrowu.setOnClickListener{
+
+            val intent = Intent(this, MainActivityDataBases::class.java)
+            startActivity(intent)
+        }
+
+        imageButtonhouseu.setOnClickListener{
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
     }

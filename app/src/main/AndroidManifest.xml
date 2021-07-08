@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/iconodelaapp_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppKotlinNav">
-
+        <activity android:name=".ui.Login.Forgotpassword"></activity>
+        <activity android:name=".ui.Login.Register" />
+        <activity android:name=".ui.Login.Login" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

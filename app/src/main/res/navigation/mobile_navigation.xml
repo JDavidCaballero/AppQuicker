@@ -23,8 +23,8 @@
             android:id="@+id/action_nav_home_to_fragmento_ofimtica"
             app:destination="@id/nav_ofimatica" />
         <action
-            android:id="@+id/action_nav_home_to_mainActivityDataBases"
-            app:destination="@id/mainActivityDataBases" />
+            android:id="@+id/action_nav_home_to_login"
+            app:destination="@id/login" />
     </fragment>
 
     <fragment
@@ -71,8 +71,8 @@
             app:destination="@id/nav_home" />
     </fragment>
     <activity
-        android:id="@+id/mainActivityDataBases"
-        android:name="com.example.appkotlinnav.ui.Dbase.MainActivityDataBases"
-        android:label="activity_main_data_bases"
-        tools:layout="@layout/activity_main_data_bases" />
+        android:id="@+id/login"
+        android:name="com.example.appkotlinnav.ui.Login.Login"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
 </navigation>

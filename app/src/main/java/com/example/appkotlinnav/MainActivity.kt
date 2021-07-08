@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMain.toolbar)
 
         binding.appBarMain.fab.setOnClickListener { view ->
-            Toast.makeText(getApplicationContext(), "Muy bien! eres crack", Toast.LENGTH_LONG).show()
+            Toast.makeText(getApplicationContext(), "Boton cara", Toast.LENGTH_LONG).show()
 
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
