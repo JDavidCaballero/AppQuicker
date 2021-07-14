@@ -4,6 +4,8 @@ class User {
 
     var id : Int = 0
 
+    var nombreapp : String =  ""
+
     var email : String = ""
 
     var username : String = ""
@@ -12,7 +14,9 @@ class User {
 
     /*var pin : Int = 0*/
 
-    constructor(email : String , username:String, password : String /*, pin : Int*/) {
+    constructor(nombreapp : String,email : String , username:String, password : String /*, pin : Int*/) {
+
+        this.nombreapp = nombreapp
 
         this.email = email
 

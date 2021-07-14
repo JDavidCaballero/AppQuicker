@@ -2,8 +2,13 @@ package com.example.appkotlinnav.ui.Dbase
 
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.WindowManager
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.Toast
 import com.example.appkotlinnav.*
@@ -17,6 +22,14 @@ class MainActivityDataBases : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main_data_bases)
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            val window = this.window
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            window.statusBarColor = this.resources.getColor(R.color.Azul)
+        }
+
 
         val context = this
 
@@ -45,11 +58,11 @@ class MainActivityDataBases : AppCompatActivity() {
 
             if (validarEmail() == true && etvEmail.text.toString().length > 0 &&
 
-                etvUserName.text.toString().length > 0 &&
+                etvTitulo.text.toString().length > 0 &&
 
                 etvPassword.text.toString().length > 0 ) {
 
-                var user = User(etvEmail.text.toString() ,etvUserName.text.toString(), etvPassword.text.toString()/*, etvPin.text.toString().toInt()*/)
+                var user = User(etvTitulo.text.toString() ,etvEmail.text.toString() ,etvUserName.text.toString(), etvPassword.text.toString()/*, etvPin.text.toString().toInt()*/)
                 var db = DataBaseHandler(context)
                 db.insertData(user)
 

@@ -1,8 +1,10 @@
 package com.example.appkotlinnav.ui.Dbase
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Toast
 import com.example.appkotlinnav.DataBaseHandler
 import com.example.appkotlinnav.MainActivity
@@ -15,6 +17,13 @@ class UpdateDbase : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_dbase)
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            val window = this.window
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            window.statusBarColor = this.resources.getColor(R.color.Azul)
+        }
 
         val context = this
 
@@ -42,23 +51,21 @@ class UpdateDbase : AppCompatActivity() {
 
             if (validarEmail() == true &&
 
-                etvSelectId.text.toString().length > 0 &&
+                etvSelectAppName.text.toString().length > 0 &&
 
                 etvUpdatedEmail.text.toString().length > 0 &&
-
-                etvUpdatedUserName.text.toString().length > 0 &&
 
                 etvUpdatedPassword.text.toString().length > 0
 
                 /*etvUpdatedPin.text.toString().length > 0*/) {
 
-                var id = etvSelectId.text.toString().toInt()
+                var idNombreapp = etvSelectAppName.text.toString()
 
-                var user = User(etvUpdatedEmail.text.toString(),etvUpdatedUserName.text.toString() ,etvUpdatedPassword.text.toString()/*, etvUpdatedPin.text.toString().toInt()*/)
+                var user = User(etvSelectAppName.text.toString() ,etvUpdatedEmail.text.toString(),etvUpdatedUserName.text.toString() ,etvUpdatedPassword.text.toString()/*, etvUpdatedPin.text.toString().toInt()*/)
 
                 var db = DataBaseHandler(context)
 
-                db.updateTableById(user, id)
+                db.updateTableByAppName(user, idNombreapp)
 
                 val intent = Intent(this, ShowData::class.java)
                 startActivity(intent);

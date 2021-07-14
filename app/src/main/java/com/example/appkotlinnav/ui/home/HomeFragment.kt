@@ -1,10 +1,12 @@
 package com.example.appkotlinnav.ui.home
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.fragment.app.Fragment
@@ -31,6 +33,8 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
 
     ): View? {
+
+
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
@@ -69,15 +73,6 @@ class HomeFragment : Fragment() {
         myfourthtbutton.setOnClickListener {
 
             val action = HomeFragmentDirections.actionNavHomeToFragmentoOfimtica()
-            findNavController().navigate(action)
-
-        }
-
-        val myfivetbutton = root.findViewById<Button>(R.id.button2)
-
-        myfivetbutton.setOnClickListener {
-
-            val action = HomeFragmentDirections.actionNavHomeToLogin()
             findNavController().navigate(action)
 
         }

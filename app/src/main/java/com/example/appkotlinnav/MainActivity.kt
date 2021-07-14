@@ -15,7 +15,10 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
 import com.example.appkotlinnav.databinding.ActivityMainBinding
+import com.example.appkotlinnav.ui.Login.Login
+import com.example.appkotlinnav.ui.home.HomeFragmentDirections
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,7 +34,10 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMain.toolbar)
 
         binding.appBarMain.fab.setOnClickListener { view ->
-            Toast.makeText(getApplicationContext(), "Boton cara", Toast.LENGTH_LONG).show()
+            Toast.makeText(getApplicationContext(), "Entraste al gestor de contraseñas", Toast.LENGTH_LONG).show()
+
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
 
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
@@ -41,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_redes, R.id.nav_entretenimiento, R.id.nav_mensajeria, R.id.nav_ofimatica, R.id.nav_comparte, R.id.nav_calificanos
+                R.id.nav_home, R.id.nav_redes, R.id.nav_entretenimiento, R.id.nav_mensajeria, R.id.nav_ofimatica
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

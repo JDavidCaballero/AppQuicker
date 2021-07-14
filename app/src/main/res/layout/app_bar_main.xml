@@ -15,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#78909C"
+            android:background="#0288D1"
             app:popupTheme="@style/Theme.AppKotlinNav.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -29,6 +29,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:backgroundTint="@color/black"
-        app:srcCompat="@drawable/ic_caritafeliz" />
+        app:srcCompat="@drawable/ic_key" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

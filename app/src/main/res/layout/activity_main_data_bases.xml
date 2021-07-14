@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.Dbase.MainActivityDataBases"
-    android:background="@drawable/gradient_home">
+    android:background="@drawable/gradient_db_passwords">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,16 +25,46 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="300dp"
                 android:layout_marginRight="300dp"
-                android:layout_marginBottom="9dp"
+                android:layout_marginBottom="50dp"
                 android:background="@android:color/transparent"
-                app:layout_constraintBottom_toTopOf="@+id/textView10"
-
+                app:layout_constraintBottom_toTopOf="@+id/textViewtitulo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.51"
                 app:srcCompat="@drawable/ic_arrow_back" />
 
+            <TextView
+                android:id="@+id/textViewtitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="30dp"
+                android:text="Nombre de la App"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toTopOf="@+id/etvTitulo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageButtonarrow" />
+
+            <EditText
+                android:id="@+id/etvTitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:padding="10dp"
+                android:backgroundTint="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewtitulo" />
 
 
             <TextView
@@ -42,16 +72,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:layout_marginTop="90dp"
                 android:layout_marginEnd="225dp"
                 android:layout_marginRight="225dp"
                 android:layout_marginBottom="30dp"
-                android:text="gestor contraseñasEmail"
+                android:text="Email"
+                android:textColor="@color/white"
                 android:textSize="34sp"
                 app:layout_constraintBottom_toTopOf="@+id/etvEmail"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/etvTitulo" />
 
             <EditText
                 android:id="@+id/etvEmail"
@@ -63,7 +93,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="30dp"
                 android:padding="10dp"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/textView7"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -76,10 +106,12 @@
 
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginEnd="225dp"
-                android:layout_marginRight="225dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
                 android:layout_marginBottom="30dp"
-                android:text="Usuario"
+                android:text="Nombre de Usuario"
+
+                android:textColor="@color/white"
                 android:textSize="34sp"
                 app:layout_constraintBottom_toTopOf="@+id/etvUserName"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +128,10 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="30dp"
                 android:padding="10dp"
-                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:hint="Si no tiene uno deje el campo vacio"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/textView11"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -112,6 +147,8 @@
                 android:layout_marginEnd="225dp"
                 android:layout_marginRight="225dp"
                 android:layout_marginBottom="30dp"
+                android:textColor="@color/white"
+
                 android:text="Password"
                 android:textSize="34sp"
                 app:layout_constraintBottom_toTopOf="@+id/etvPassword"
@@ -130,7 +167,7 @@
                 android:layout_marginBottom="30dp"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/btn_insert"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -177,8 +214,8 @@
                 android:layout_marginEnd="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_marginBottom="50dp"
-                android:backgroundTint="#66BB6A"
-                android:text="Insertar datos"
+                android:backgroundTint="#00C853"
+                android:text="Insertar Contraseña"
                 android:textColor="@color/white"
 
                 app:layout_constraintBottom_toTopOf="@+id/buttonshowdb"
@@ -193,8 +230,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="100dp"
-                android:backgroundTint="#424242"
-                android:text="Mostrar DB"
+                android:backgroundTint="#2962FF"
+                android:text="Mostrar Contraseñas"
 
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -210,10 +247,10 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="100dp"
-                android:backgroundTint="#424242"
+                android:backgroundTint="#2962FF"
                 android:textColor="@color/white"
 
-                android:text="Actualizar DB"
+                android:text="Actualizar contraseñas"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/buttonshowdb"

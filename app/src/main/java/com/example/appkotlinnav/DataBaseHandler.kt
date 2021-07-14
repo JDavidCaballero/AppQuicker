@@ -13,6 +13,7 @@ import java.util.ArrayList
 
 val DataBase_Name = "MyDB"
 val Table_Name = "Users"
+val Col_nombreApp = "nombreapp"
 val Col_Email = "email"
 val Col_UserName = "username"
 val Col_Password = "password"
@@ -25,6 +26,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
         
         val createTable = "CREATE TABLE " + Table_Name + " (" +
                 Col_Id +" INTEGER PRIMARY KEY AUTOINCREMENT," +
+                Col_nombreApp + " VARCHAR(256)," +
                 Col_UserName + " VARCHAR(256)," +
                 Col_Email + " VARCHAR(256)," +
                 Col_Password + " VARCHAR(256)" + " )" ; 
@@ -42,6 +44,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
 
         val createTableifnotexixts = "CREATE TABLE IF NOT EXISTS " + Table_Name + " (" +
                 Col_Id +" INTEGER PRIMARY KEY AUTOINCREMENT," +
+                Col_nombreApp + " VARCHAR(256)," +
                 Col_UserName + " VARCHAR(256)," +
                 Col_Email + " VARCHAR(256)," +
                 Col_Password + " VARCHAR(256)" + " )" ;
@@ -60,6 +63,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
         var cv = ContentValues()
         creatingtable(db)
 
+        cv.put(Col_nombreApp, user.nombreapp)
         cv.put(Col_Email, user.email)
         cv.put(Col_UserName, user.username)
         cv.put(Col_Password, user.password)
@@ -92,6 +96,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
             do{
                 var user = User()
                 user.id  = result.getString(result.getColumnIndex(Col_Id)).toInt()
+                user.nombreapp = result.getString(result.getColumnIndex(Col_nombreApp))
                 user.email = result.getString(result.getColumnIndex(Col_Email))
                 user.username  = result.getString(result.getColumnIndex(Col_UserName))
                 user.password = result.getString(result.getColumnIndex(Col_Password))
@@ -115,24 +120,30 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DataBase
         db.close()
     }
 
-    fun updateTableById(user : User, id : Int){
+    fun updateTableByAppName(user : User, nombreapp : String){
 
         val db = this.writableDatabase
         var cv = ContentValues()
 
-
+        cv.put(Col_nombreApp, user.nombreapp)
         cv.put(Col_Email, user.email)
         cv.put(Col_UserName, user.username)
         cv.put(Col_Password, user.password)
        /* cv.put(Col_Pin, user.pin)*/
 
-        var resultUp = db.update(Table_Name, cv, "$Col_Id=?", arrayOf(id.toString()))
+        var resultUp = db.update(Table_Name, cv, "$Col_nombreApp=?", arrayOf(nombreapp))
 
-        if(resultUp <= 0)
-            Toast.makeText(context, "Falló al Actualizar datos o no se encontró la ID de usuario",Toast.LENGTH_SHORT).show()
-
-        else
-            Toast.makeText(context, "Se Actualizaron los datos correctamente",Toast.LENGTH_SHORT).show()
+        if(resultUp <= 0) {
+            Toast.makeText(
+                context,
+                "Fallo al Actualizar datos / no se encontró el nombre de esa App",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+        else {
+            Toast.makeText(context, "Se Actualizaron los datos correctamente", Toast.LENGTH_SHORT)
+                .show()
+        }
     }
 
     //solo autoincrementa el nnumero de pin o col_age
